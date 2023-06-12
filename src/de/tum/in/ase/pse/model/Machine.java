@@ -1,5 +1,9 @@
 package de.tum.in.ase.pse.model;
 
+import de.tum.in.ase.pse.view.Observer;
+import javafx.beans.Observable;
+import javafx.collections.ObservableList;
+
 /**
  * This class is representing a factory machine, which is the model inside the system.
  */
@@ -8,6 +12,7 @@ public abstract class Machine {
 	/**
 	 * 1.1 TODO: Create a list for the observers
 	 */
+	private ObservableList<Observer> observers;
 
 
 	/**
@@ -40,18 +45,29 @@ public abstract class Machine {
 	 * 1.2: TODO: Add a method addObserver(Observer) for adding observers to the list
 	 * This method attaches an observer to the observer list.
 	 */
+	public void addObserver(Observer observer) {
+		observers.add(observer);
+	}
 
 
 	/**
 	 * 1.2: TODO: Add a method removeObserver(Observer) for removing observers from the list
 	 * This method detaches an observer from the observer list.
 	 */
+	public void removeObserver(Observer observer) {
+		observers.remove(observer);
+	}
 
 
 	/**
 	 *  1.3: TODO: Add a method notifyObservers() for updating observers in the list
 	 * This method calls the update() method for each observer.
 	 */
+	protected void notifyObservers() {
+		for (Observer observer : observers) {
+			observer.update(this);
+		}
+	}
 
 
 	/**
@@ -62,22 +78,22 @@ public abstract class Machine {
 
 	public void setTargetVoltage(int targetVoltage) {
 		this.targetVoltage = targetVoltage;
-
+		notifyObservers();
 	}
 
 	public void setCurrentVoltage(int currentVoltage) {
 		this.currentVoltage = currentVoltage;
-
+		notifyObservers();
 	}
 
 	public void setTargetTemperature(int targetTemperature) {
 		this.targetTemperature = targetTemperature;
-
+		notifyObservers();
 	}
 
 	public void setCurrentTemperature(int currentTemperature) {
 		this.currentTemperature = currentTemperature;
-
+		notifyObservers();
 	}
 
 	/**
