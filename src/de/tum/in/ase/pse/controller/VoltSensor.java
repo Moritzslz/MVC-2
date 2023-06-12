@@ -50,6 +50,6 @@ public class VoltSensor {
 		/**
 		 * 2.2 TODO: Update the machine's current voltage (the new value) using the machine's setter
 		 */
-		machine.setCurrentTemperature(value);
+		machine.setCurrentVoltage(value);
 	}
 }

@@ -29,7 +29,7 @@ public class TransistorTerminal {
 		 *          by the machine's min- and max-temperature. If in range, set the machines target temperature, \
 		 *          if not throw a new Factory Exception
 		 */
-		if (machine.getMinTemperature() < targetTemperature && targetTemperature < machine.getMaxTemperature()) {
+		if (machine.getMinTemperature() <= targetTemperature && targetTemperature <= machine.getMaxTemperature()) {
 			machine.setTargetTemperature(targetTemperature);
 		} else {
 			throw new FactoryException("Invalid (to low / to high) target temperature");
@@ -47,7 +47,7 @@ public class TransistorTerminal {
 		 *          by the machine's min- and max-temperature. If in range, set the machines target voltage, \
 		 *          if not throw a new Factory Exception
 		 */
-		if (machine.getMinVoltage() < targetVoltage && targetVoltage < machine.getMaxVoltage()) {
+		if (machine.getMinVoltage() <= targetVoltage && targetVoltage <= machine.getMaxVoltage()) {
 			machine.setTargetVoltage(targetVoltage);
 		} else {
 			throw new FactoryException("Invalid (to low / to high) target voltage");
