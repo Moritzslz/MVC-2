@@ -4,6 +4,8 @@ import de.tum.in.ase.pse.view.Observer;
 import javafx.beans.Observable;
 import javafx.collections.ObservableList;
 
+import java.util.ArrayList;
+
 /**
  * This class is representing a factory machine, which is the model inside the system.
  */
@@ -12,7 +14,7 @@ public abstract class Machine {
 	/**
 	 * 1.1 TODO: Create a list for the observers
 	 */
-	private ObservableList<Observer> observers;
+	private ArrayList<Observer> observers;
 
 
 	/**
@@ -39,6 +41,7 @@ public abstract class Machine {
 		this.minTemperature = minTemperature;
 		this.maxTemperature = maxTemperature;
 		this.targetTemperature = targetTemperature;
+		this.observers = new ArrayList<>();
 	}
 
 	/**
