@@ -1,10 +1,9 @@
 package de.tum.in.ase.pse.model;
 
 import de.tum.in.ase.pse.view.Observer;
-import javafx.beans.Observable;
-import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class is representing a factory machine, which is the model inside the system.
@@ -14,7 +13,7 @@ public abstract class Machine {
 	/**
 	 * 1.1 TODO: Create a list for the observers
 	 */
-	private ArrayList<Observer> observers;
+	private List<Observer> observers;
 
 
 	/**
