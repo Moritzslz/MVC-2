@@ -64,7 +64,7 @@ public class TransistorTerminal {
 		 * 3. TODO: Implement this function by checking, if the passed transistorSize is in the range [7, 22] \
 		 *          If in range, set the machines target transistorSize , if not throw a new Factory Exception
 		 */
-		if (7 <= transistorSize && transistorSize <= 22) {
+		if (6 < transistorSize && transistorSize < 23) {
 			machine.setTransistorSize(transistorSize);
 		} else {
 			throw new FactoryException("Invalid (to low / to high) space");

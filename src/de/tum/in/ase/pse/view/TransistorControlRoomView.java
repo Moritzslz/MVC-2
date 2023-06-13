@@ -46,6 +46,7 @@ public class TransistorControlRoomView extends ControlRoomView {
 	public TransistorControlRoomView(TransistorMachine machine, TransistorTerminal terminal) {
 		super(machine, SCENE_WIDTH, SCENE_HEIGHT);
 		this.terminal = terminal;
+		this.machine = machine;
 		this.machine.addObserver(this);
 	}
 
