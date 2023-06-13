@@ -13,6 +13,8 @@ import de.tum.in.ase.pse.utils.FactoryException;
 public class TransistorTerminal {
 
 	private final TransistorMachine machine;
+	private final int minTransistorSize = 7;
+	private final int maxTransistorSize = 22;
 	public TransistorTerminal(TransistorMachine transistorMachine) {
 		this.machine = transistorMachine;
 	}
@@ -63,8 +65,6 @@ public class TransistorTerminal {
 		 * 3. TODO: Implement this function by checking, if the passed transistorSize is in the range [7, 22] \
 		 *          If in range, set the machines target transistorSize , if not throw a new Factory Exception
 		 */
-		int minTransistorSize = 7;
-		int maxTransistorSize = 22;
 		if (minTransistorSize <= transistorSize && transistorSize <= maxTransistorSize) {
 			machine.setTransistorSize(transistorSize);
 		} else {

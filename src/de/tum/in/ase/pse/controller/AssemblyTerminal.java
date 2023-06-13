@@ -12,6 +12,8 @@ import de.tum.in.ase.pse.utils.FactoryException;
 public class AssemblyTerminal {
 
 	private final AssemblyMachine machine;
+	private final int minSpaceBetween = 27;
+	private final int maxSpaceBetween = 60;
 
 	public AssemblyTerminal(AssemblyMachine assemblyMachine) {
 		this.machine = assemblyMachine;
@@ -63,8 +65,6 @@ public class AssemblyTerminal {
 		 * 3. TODO: Implement this function by checking, if the passed space is in the range [27, 60] \
 		 *          If in range, set the machines target space , if not throw a new Factory Exception
 		 */
-		int minSpaceBetween = 27;
-		int maxSpaceBetween = 60;
 		if (minSpaceBetween <= space && space <= maxSpaceBetween) {
 			machine.setSpaceBetweenTrans(space);
 		} else {
