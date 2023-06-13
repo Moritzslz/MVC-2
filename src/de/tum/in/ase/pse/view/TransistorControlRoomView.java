@@ -46,7 +46,6 @@ public class TransistorControlRoomView extends ControlRoomView {
 	public TransistorControlRoomView(TransistorMachine machine, TransistorTerminal terminal) {
 		super(machine, SCENE_WIDTH, SCENE_HEIGHT);
 		this.terminal = terminal;
-		this.machine = machine;
 		this.machine.addObserver(this);
 	}
 
@@ -64,8 +63,8 @@ public class TransistorControlRoomView extends ControlRoomView {
 		 * 2. TODO: Use the values from the machine (current-temperature, current-voltage, transSize, transType\
 		 *          and gateType) and provide them instead of the static dummy values
 		 */
-		getCurrentTemperatureDisplay().setText(machine.getCurrentTemperature() + "");
-		getCurrentVoltageDisplay().setText(machine.getCurrentVoltage() + "");
+		getCurrentTemperatureDisplay().setText(currMachine.getCurrentTemperature() + "");
+		getCurrentVoltageDisplay().setText(currMachine.getCurrentVoltage() + "");
 		TransistorMachine transistorMachine = (TransistorMachine) currMachine;
 		transSizeDisplay.setText(transistorMachine.getTransistorSize() + "");
 		transTypeDisplay.setText(transistorMachine.getTransistorType().name());

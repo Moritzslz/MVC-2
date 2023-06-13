@@ -64,8 +64,8 @@ public class AssemblyControlRoomView extends ControlRoomView {
 		 * 2. TODO: Use the values from the machine (current-temperature, current-voltage, spaceBetweenTrans and \
 		 *          chipType) and provide them instead of the static dummy values
 		 */
-		getCurrentTemperatureDisplay().setText(machine.getCurrentTemperature() + "");
-		getCurrentVoltageDisplay().setText(machine.getCurrentVoltage() + "");
+		getCurrentTemperatureDisplay().setText(currMachine.getCurrentTemperature() + "");
+		getCurrentVoltageDisplay().setText(currMachine.getCurrentVoltage() + "");
 		AssemblyMachine assemblyMachine = (AssemblyMachine) currMachine;
 		spaceBetweenDisplay.setText(assemblyMachine.getSpaceBetweenTrans() + "");
 		chipTypeDisplay.setText(assemblyMachine.getChipType().name());
