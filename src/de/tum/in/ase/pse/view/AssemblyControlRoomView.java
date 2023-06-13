@@ -41,7 +41,7 @@ public class AssemblyControlRoomView extends ControlRoomView {
 	private Label chipTypeDisplay;
 	private Button spaceBetweenSubmit;
 	private Button chipTypeSubmit;
-	private Machine machine;
+	private AssemblyMachine machine;
 
 	public AssemblyControlRoomView(AssemblyMachine machine, AssemblyTerminal terminal) {
 		super(machine, SCENE_WIDTH, SCENE_HEIGHT);

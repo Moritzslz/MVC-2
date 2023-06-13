@@ -41,7 +41,7 @@ public class TransistorControlRoomView extends ControlRoomView {
 	private Button transSizeSubmit;
 	private Button transTypeSubmit;
 	private Button gateTypeSubmit;
-	private Machine machine;
+	private TransistorMachine machine;
 
 	public TransistorControlRoomView(TransistorMachine machine, TransistorTerminal terminal) {
 		super(machine, SCENE_WIDTH, SCENE_HEIGHT);
