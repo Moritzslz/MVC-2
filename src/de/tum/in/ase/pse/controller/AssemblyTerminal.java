@@ -63,7 +63,9 @@ public class AssemblyTerminal {
 		 * 3. TODO: Implement this function by checking, if the passed space is in the range [27, 60] \
 		 *          If in range, set the machines target space , if not throw a new Factory Exception
 		 */
-		if (27 <= space && space <= 60) {
+		int minSpaceBetween = 27;
+		int maxSpaceBetween = 60;
+		if (minSpaceBetween <= space && space <= maxSpaceBetween) {
 			machine.setSpaceBetweenTrans(space);
 		} else {
 			throw new FactoryException("Invalid (to low / to high) space");

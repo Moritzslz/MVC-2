@@ -13,7 +13,6 @@ import de.tum.in.ase.pse.utils.FactoryException;
 public class TransistorTerminal {
 
 	private final TransistorMachine machine;
-
 	public TransistorTerminal(TransistorMachine transistorMachine) {
 		this.machine = transistorMachine;
 	}
@@ -64,7 +63,9 @@ public class TransistorTerminal {
 		 * 3. TODO: Implement this function by checking, if the passed transistorSize is in the range [7, 22] \
 		 *          If in range, set the machines target transistorSize , if not throw a new Factory Exception
 		 */
-		if (7 <= transistorSize && transistorSize <= 22) {
+		int minTransistorSize = 7;
+		int maxTransistorSize = 22;
+		if (minTransistorSize <= transistorSize && transistorSize <= maxTransistorSize) {
 			machine.setTransistorSize(transistorSize);
 		} else {
 			throw new FactoryException("Invalid (to low / to high) space");
